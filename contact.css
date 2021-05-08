@@ -1,6 +1,11 @@
 .cnt-main-header{
     padding: 2rem 1rem;
 }
+@media (min-width:800px){
+    .cnt-main-header{
+        padding: 4rem 2rem;
+    }
+}
 .cnt-sect-1{
     text-align: center;
     padding: 1rem;

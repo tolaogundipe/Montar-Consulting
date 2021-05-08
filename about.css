@@ -4,7 +4,7 @@
     background-position: center center;
     background-repeat: no-repeat;
    background-size: contain;
-    padding: 2rem 3rem;
+    padding: 2.5rem 2rem;
 }
 @media (min-width:800px){
     .about-header{
@@ -12,6 +12,7 @@
         background-position: left -2px top -280px;
         background-repeat: no-repeat;
         background-size: unset;
+        padding: 4rem 2rem;
     }
 }
 .abt-header-txt-grp{

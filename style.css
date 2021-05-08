@@ -39,24 +39,27 @@ html {
     width: 100%;
     position: relative;
 } */
-   #nav_group, .nav-group{
-    display: none;
+.nav-group{
     background-color: rgba(245, 245, 245, 0.8);
     padding: 1rem;
     border-radius: 12px;
 }  
+#nav_group{
+    display: none;
+}
 @media (min-width:800px){
-   .nav-group, #nav_group{
-       display: block;
-       /* margin-left: 2rem; */
+     .nav-group{
        background-color: unset;
    }
+    #nav_group{
+        display: block;
+    }   
 
 }
  .nav-item{
     display: block;
     color: rgb(251, 115, 83);
-    padding-right: 0.5rem;
+    padding: 1rem 0.5rem;
     text-decoration: none;
 }  
 @media (min-width:800px){
@@ -78,7 +81,7 @@ html {
     color: white;
     width: 5rem;
     border-radius: 50px;
-    margin-top: 2rem;
+    margin: 2rem 0 0 1rem;
     padding: 0.7rem 1.5rem;
 }
 .cta-button:hover{
@@ -91,15 +94,16 @@ html {
         margin-left: 3rem;
     }
 }
-.fa-bars{
+#menu-icon{
     position: absolute;
     right: 0;
     top: 0;
     color: rgb(113, 46, 30);
     margin: 2.5rem 3rem 0 1rem;
 }
+
 @media (min-width:800px) {
-    .fa-bars{
+    #menu-icon{
         display: none;
     }
     
@@ -110,7 +114,7 @@ html {
     background-position: top 150px center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
 }
 /* @media (min-width:1200px){
     .main-header{
@@ -125,18 +129,22 @@ html {
         background-image: url(assets/header-img-sm.png);
         background-position: top -250px right -250px;
         background-size: cover;
+        padding: 1rem 1rem;
     }
 }
 .text-grp{
     position: absolute;
-    top: 450px;
+    top: 440px;
     text-align: center;
-    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+
 }
 @media (min-width:800px){
     .text-grp{
         width: 50%;
-        left: 0px;
+        left: 280px;
         top: 250px;
         text-align: left;
         padding: 2rem 3rem;
