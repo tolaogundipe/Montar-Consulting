@@ -1,5 +1,5 @@
 .cnt-main-header{
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
 }
 @media (min-width:800px){
     .cnt-main-header{

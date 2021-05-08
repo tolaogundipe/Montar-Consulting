@@ -4,7 +4,7 @@
     background-position: center center;
     background-repeat: no-repeat;
    background-size: contain;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0.5rem;
 }
 @media (min-width:800px){
     .about-header{
