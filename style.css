@@ -64,11 +64,11 @@ html {
 
 @media (min-width:800px){
     .nav-item{
-        display: inline;
+       display: inline;
         color: rgb(251, 115, 83);
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none;
+        -webkit-transition: unset;
+        -o-transition: unset;
+        transition: unset;
         padding: 0 0.5rem;
     }
     .nav-bar{
@@ -107,14 +107,14 @@ html {
     color: white;
     width: 5rem;
     border-radius: 50px;
-    margin: 2rem 1rem 0 1rem;
+    margin: 2rem 1rem 0 0.5rem;
     padding: 0.7rem 1.5rem;
 }
 .cta-button:hover{
     background-color: rgba(255, 99, 71, 0.9);
     padding: 0.8rem 1.6rem;
 }
-@media (min-width:600px){
+@media (min-width:800px){
     .cta-button{
         background-color: rgb(113, 46, 30);
         margin-left: 3rem;
@@ -142,15 +142,24 @@ html {
     background-size: contain;
     padding: 2rem 0.5rem;
 }
-@media (min-width:800px){
+@media (min-width:1024px){
     .main-header{
         min-height: 35rem;
-        background-image: url(assets/header-img-sm.png);
-        background-position: top -350px right -300px;
+        background-image: url(assets/home-page-hero.png);
+        background-position: top -500px right -380px;
         background-size: cover;
-        padding: 3rem 2rem;
+        padding: 4rem var(--side-space);
     }
 }
+/* @media (min-width:800px){
+    .main-header{
+        min-height: 35rem;
+        background-image: url(assets/home-page-hero.png);
+        background-position: top -350px right -300px;
+        background-size: cover;
+        padding: 4rem var(--side-space);
+    }
+} */
 .text-grp{
     position: absolute;
     top: 440px;
@@ -172,7 +181,8 @@ html {
         top: 650px;
     }
 }
-@media (min-width:1024px){
+/* this is ideal for my laptop screen and probably desktop screens */
+@media (min-width:800px){
     .text-grp{
         width: 50%;
         left: 380px;
@@ -204,13 +214,14 @@ html {
 .orange-btn{
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     background-color: rgb(233, 60, 21);
     border-color: none;
     color: white;
     display: inline-block;
     border-style: none;
-    width: 25vw;
+    width: clamp(150px, 25vw, 250px);
+    font-size: 17px;
 }
 .sect-1{
     background-color: rgba(113, 46, 30, 0.95);
@@ -225,6 +236,11 @@ html {
 @media (min-width:500px){
     .sect-1-outter{
         margin-top: 5rem;
+    }
+}
+@media (min-width:750px){
+    .sect-1-outter{
+        margin-top: 6rem;
     }
 }
 @media (min-width:800px){
@@ -375,10 +391,13 @@ input[type=text]{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding: 2rem var(--side-space);
+        padding: 1rem var(--side-space);
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+                -webkit-box-align: start;
+                    -ms-flex-align: start;
+                        align-items: flex-start;
     }
     .footer-nav-grp{
         display: block;
@@ -386,7 +405,6 @@ input[type=text]{
 }
 .footer-sect{
     padding-top: 1rem;
-    line-height: 1.2;
 }
 .footer-icon{
     width: 3rem;
@@ -421,4 +439,12 @@ input[type=text]{
     color: rgb(251, 115, 83);
     display: block;
     padding: 0.5rem;
-}   
+}  
+.footer-nav-item:hover{
+    cursor: pointer;
+}
+.footer-nav-item2{
+    color: white;
+    -webkit-text-decoration-color: rgb(251, 115, 83);
+            text-decoration-color: rgb(251, 115, 83);
+}
