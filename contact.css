@@ -8,27 +8,32 @@
 }
 .cnt-sect-1{
     text-align: center;
-    padding: 1rem;
-    width: 100%;
 }
 .cnt-sect-1 h1{
     color: rgb(37, 7, 0);
+    margin-bottom: 2rem;
 }
 .cnt-sect1-grp-all{
-    width: 98%;
+    /* width: 96%;
     padding: 0 2%;
-    margin-top: 2rem;
-    /* padding: 2rem 3rem; */
+    margin-top: 2rem; */
       
 }
-@media (min-width:800px){
+@media (min-width:950px){
     .cnt-sect1-grp-all{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+                -ms-flex-align: start;
+                align-items: flex-start;
     }
     
 }
 .cnt-hero-img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .cnt-sect1-icon-grp img{
@@ -36,10 +41,16 @@
     height: clamp( 16px, 2.5vw, 36px);
 }
 .cnt-sect1-icon-grp{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: -2rem
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items:center;
+    margin-top: -1rem;
 }
 .cnt-sect1-icon-grp a{
     text-decoration: none;
@@ -47,15 +58,21 @@
     color: rgb(37, 7, 0);
 }
 .cnt-sect1-grp{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .cnt-form{
-    margin: auto;
-    padding: 1rem 1rem;
+    margin: 2rem 2rem; 
+    padding: 1rem 2rem;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.993);
-    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+            box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
     
+}
+@media (min-width:950px){
+    .cnt-form{
+        margin-top: unset;
+    }
 }
 .cnt-form h2{
     margin-bottom: 1.5rem;
@@ -68,13 +85,19 @@
     border-radius: 50px;
     border: 1px solid #ccc;
     margin: 0.5rem;
-    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+            box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
     padding: 2rem;
     outline: none;
     caret-color: rgb(233, 60, 21);
     color: rgb(37, 7, 0);
 }
 form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }

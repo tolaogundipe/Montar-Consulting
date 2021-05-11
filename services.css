@@ -1,49 +1,21 @@
 .services-header{
-    min-height: 35rem;
-    background-image: url(assets/services-hero.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-   background-size: contain;
-   padding: 2.5rem 0.5rem;
+    min-height: 40rem;
+   padding: 2rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:800px){
     .services-header{
-        min-height: 30rem;
-        background-image: url(assets/services-hero-big.png);
-        background-position: left -2px top -150px;
-        background-repeat: no-repeat;
-        background-size: unset;
-        padding: 4rem 2rem;
+        min-height: 25rem;
+        padding: 4rem var(--side-space);
     }
 }
-@media (min-width:700px){
-    .services-header{
-        min-height: 45rem;
-        background-position: left -2px top 150px;
-    }
-}
-.serv-header-txt-grp{
-    position: absolute;
-    top: 550px;
-    left: 16px;
+.serv-header-text-grp{
     text-align: center;
-    width: 85%;
 }
-@media (min-width:800px){
-    .serv-header-txt-grp{
-        position: absolute;
-        width: 40%;
-        left: 500px;
-        top: 300px;
+
+@media (min-width:950px){
+    .serv-header-text-grp{
+        width: 50%;
         text-align: left;
-        padding: 2rem 3rem;
-        color: white;
-    }
-}
-@media (min-width:700px){
-    .serv-header-txt-grp{
-        top: 900px;
-        left: 50px;
     }
 }
 .serv-sect-1{
@@ -53,15 +25,15 @@
 .serv-sect-1-outter{
     background-color: rgba(113, 46, 30, 0.15);
     border-top-right-radius: 50px;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     padding-top: 2rem
     
 }
-@media (min-width:800px){
+/* @media (min-width:800px){
     .serv-sect-1-outter{
         margin-top: 5rem;
     }
-}
+} */
 .serv-sect1-txt{
     padding: 2rem 3rem;
     text-align: center;
@@ -84,14 +56,20 @@
     background-color: rgba(148, 148, 148, 0.15);
     padding: 2rem;
     border-radius: 50px;
-    box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
+            box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
 }
 @media (min-width:800px){
     .serv-sect2-li{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 2rem 2rem;
-        justify-content: space-around;
-        align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .serv-sect2-li img{
         width: 50%;
@@ -113,7 +91,11 @@
 .serv-sect2-grp li{
     padding-bottom: 1rem;
 }
-.serv-sect2-grp img{
+/* .serv-sect2-grp img{
+    max-width: 100%;
+    height: auto;
+} */
+.serv-sect2-li img{
     max-width: 100%;
     height: auto;
 }

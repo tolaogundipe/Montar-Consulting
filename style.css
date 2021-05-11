@@ -136,9 +136,6 @@ html {
 }
 .main-header{
     min-height: 40rem;
-    background-position: top 150px center;
-    background-repeat: no-repeat;
-    background-size: contain;
     padding: 2.5rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:950px){
