@@ -1,3 +1,16 @@
+@media (min-width:400px){
+    body h2{
+        border-bottom: 5px solid rgb(233, 60, 21);
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        margin: 0 auto 0 auto;
+        padding-bottom: 7px;
+    }
+}
+body h2{
+    border-bottom: 5px solid rgb(233, 60, 21);
+}
 .services-header{
     min-height: 40rem;
    padding: 2rem 0.5rem 5rem 0.5rem;
@@ -25,15 +38,14 @@
 .serv-sect-1-outter{
     background-color: rgba(113, 46, 30, 0.15);
     border-top-right-radius: 50px;
-    /* margin-top: 10rem; */
     padding-top: 2rem
     
 }
-/* @media (min-width:800px){
+@media (min-width:650px){
     .serv-sect-1-outter{
         margin-top: 5rem;
     }
-} */
+}
 .serv-sect1-txt{
     padding: 2rem 3rem;
     text-align: center;
@@ -59,11 +71,21 @@
     -webkit-box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
             box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
 }
+.serv-sect2-li{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
 @media (min-width:800px){
     .serv-sect2-li{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         padding: 2rem 2rem;
         -ms-flex-pack: distribute;
             justify-content: space-around;
@@ -75,19 +97,28 @@
         width: 50%;
     }
 }
-.serv-sect2-grp h2{
-    margin-bottom: 1rem;
-    border-bottom: 5px solid rgb(233, 60, 21);
-}
 .serv-sect2-grp ul{
     list-style-type: circle;
     padding: 1rem 0;
     list-style-position: outside;
     text-align: left;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     width: 50%;
 }
+@media (min-width:800px){
+    .serv-sect2-grp ul{
+        margin: unset;
+        font-size: 2vw;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+                  
+    }
+}
+
 .serv-sect2-grp li{
     padding-bottom: 1rem;
 }
@@ -121,6 +152,9 @@
 .serv-sect4-form{
     margin: auto;
 }
+.serv-sect-4 p{
+    padding: 0 2rem;
+}
 input[type=text]{
     padding: 1rem;
     border-radius: 50px;
@@ -129,5 +163,6 @@ input[type=text]{
     color: rgba(37, 7, 0, 0.3);
 }
 .serv-sect4-heading{
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
 }

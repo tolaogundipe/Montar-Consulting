@@ -1,3 +1,36 @@
+/* <<<<<<<<<--------------declare fonts------------>>>>>>>>>>>>>>>>>>>>> */
+
+/* roboto-300italic - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local(''),
+         url('./assets/fonts/roboto-v27-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./assets/fonts/roboto-v27-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./assets/fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./assets/fonts/roboto-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('./assets/fonts/roboto-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./assets/fonts/roboto-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* <<<<<<<<<--------------finish declare fonts------------>>>>>>>>>>>>>>>>>>>>> */
+
+
+
 html {
     margin: 0;
     padding: 0;
@@ -16,15 +49,43 @@ html {
  body{
     margin: 0;
     padding: 0;
-    width: 100%;
     background-color: rgba(113, 46, 30, 0.1);
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.6;
 } 
+@media (min-width:500px){
+    body h2{
+        border-bottom: 5px solid rgb(233, 60, 21);
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        margin: 0 auto 0 auto;
+        line-height: 0.8;
+        padding-bottom: 7px;
+    }
+}
+body h2{
+    border-bottom: 5px solid rgb(233, 60, 21);
+}
 
  :root{
         --side-space: clamp(50px, 5vw, 100px);
+ }
+ h1{
+     font-family: 'Roboto';
+     font-style: regular;
+     font-weight: 700;
+     padding: 1rem 1rem 0 1rem;
+ }
+ @media (min-width:950px){
+     h1{
+         padding: unset;
+     }
  }
 .logo{
     display: block;
@@ -105,7 +166,7 @@ html {
 .cta-button{
     background-color: rgb(255, 99, 71);
     color: white;
-    width: 5rem;
+    width: 6rem;
     border-radius: 50px;
     margin: 2rem 1rem 0 0.5rem;
     padding: 0.7rem 1.5rem;
@@ -126,6 +187,8 @@ html {
     top: 0;
     color: rgb(113, 46, 30);
     margin: 2.5rem 1.5rem 0 1rem;
+    /* width: clamp( 0px, 3vw, 500px);
+    height: clamp( 30px, 3vw, 50px); */
 }
 
 @media (min-width:950px) {
@@ -136,6 +199,8 @@ html {
 }
 .main-header{
     min-height: 40rem;
+    background-image: url(assets/home-page-background.png);
+    background-position:  right -200px top  -500px;
     padding: 2.5rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:950px){
@@ -160,6 +225,7 @@ html {
     }
 }
 .header-flexbox{
+    height: 35rem;
     margin-top: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -168,9 +234,8 @@ html {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    -ms-flex-pack: distribute;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+   -ms-flex-pack: distribute;
+       justify-content: space-around;
             -webkit-box-align: center;
                 -ms-flex-align: center;
                     align-items: center;
@@ -179,7 +244,7 @@ html {
 
 @media (min-width:950px){
     .header-flexbox{
-        /* margin-top: 2rem; */
+        height: 20rem;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
@@ -337,20 +402,23 @@ html {
     margin: 2rem 3rem;
 }
 .sect4-heading{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .sect4-img{
     width: 100%;
     height: auto;
+}
+.sect4-grp{
+    padding: 2rem 0;
 }
 @media (min-width:800px){
     .sect4-grp-all{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
                 -webkit-box-pack: space-evenly;
                     -ms-flex-pack: space-evenly;
                         justify-content: space-evenly;
@@ -360,6 +428,7 @@ html {
             -ms-flex: 0 0 30%;
                 flex: 0 0 30%;
         padding: 1rem;
+        
     }
 }
 .sect-5{
@@ -417,9 +486,9 @@ input[type=text]{
     padding-top: 1rem;
 }
 .footer-icon{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem 0;
+    width: clamp( 30px, 3vw, 50px);
+    height: clamp( 30px, 3vw, 50px);
+    margin: 0 5px;
 }
 .footer-body-all{
     background-color: rgba(113, 46, 30, 0.15);

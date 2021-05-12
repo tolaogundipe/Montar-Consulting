@@ -1,3 +1,16 @@
+@media (min-width:400px){
+    body h2{
+        border-bottom: 5px solid rgb(233, 60, 21);
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        margin: 0 auto 0 auto;
+        padding-bottom: 7px;
+    }
+}
+body h2{
+    border-bottom: 5px solid rgb(233, 60, 21);
+}
 .cnt-main-header{
     padding: 2rem 0.5rem;
 }
@@ -77,7 +90,6 @@
 .cnt-form h2{
     margin-bottom: 1.5rem;
     color: rgb(37, 7, 0);
-    border-bottom: 5px solid rgb(233, 60, 21);
 }
 .form-msg-field{
     height: 10rem;
