@@ -18,7 +18,7 @@ body h2{
 @media (min-width:800px){
     .services-header{
         min-height: 25rem;
-        padding: 4rem var(--side-space);
+        padding: 2rem var(--side-space);
     }
 }
 .serv-header-text-grp{

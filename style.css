@@ -37,12 +37,12 @@ html {
     font-size: 16px;
 }
 @media screen and (min-width: 320px) {
-    html {
+    html, button, .button {
       font-size: calc(16px + 6 * ((100vw - 320px) / 680));
     }
   }
   @media screen and (min-width: 1000px) {
-    html {
+    html, .cta-button {
       font-size: 22px;
     }
   } 
@@ -58,18 +58,8 @@ html {
     font-weight: 200;
     line-height: 1.6;
 } 
-@media (min-width:500px){
-    body h2{
-        border-bottom: 5px solid rgb(233, 60, 21);
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        margin: 0 auto 0 auto;
-        line-height: 0.8;
-        padding-bottom: 7px;
-    }
-}
 body h2{
+    display: inline-block;
     border-bottom: 5px solid rgb(233, 60, 21);
 }
 
@@ -121,8 +111,46 @@ body h2{
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
+    /* beginning of adding hover animation */
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
 }  
-
+.nav-item:not(.cta-button)::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(233, 60, 21); 
+    -webkit-transform: scaleX(0); 
+        -ms-transform: scaleX(0); 
+            transform: scaleX(0);
+            -webkit-transform-origin: right;
+                -ms-transform-origin: right;
+                    transform-origin: right;
+                    -webkit-transition: -webkit-transform 250ms ease-in;
+                    transition: -webkit-transform 250ms ease-in;
+                    -o-transition: transform 250ms ease-in;
+                    transition: transform 250ms ease-in;
+                    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+@media (min-width:950px){
+    .nav-item:not(.cta-button)::after{
+        background-color: rgb(113, 46, 30);
+        bottom: -2px;
+    }
+}
+.nav-item:not(.cta-button):hover::after{
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+            -webkit-transform-origin: left;
+                -ms-transform-origin: left;
+                    transform-origin: left;
+}
 @media (min-width:950px){
     .nav-item{
        display: inline;
@@ -145,41 +173,53 @@ body h2{
         margin-top: -2rem;
     }
 }
-.nav-item:not(.cta-button):hover{
-    text-decoration: underline;
-}
 .closebtn {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -20px;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
-    color: rgb(233, 60, 21);
+    margin-left: 220px;
+    color: white;
     text-decoration: none;
-    padding-top: 1rem;
+   
   }
+  .closebtn:hover{
+      background-color: rgb(233, 60, 21);
+      border-radius: 200px;
+  }
+ 
 @media (min-width:950px){
       .closebtn{
           display: none;
       } 
 }
 .cta-button{
-    background-color: rgb(255, 99, 71);
+    display: inline-block;
+    position: relative;
+    border: 2px solid rgb(233, 60, 21);
+    z-index: 1;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    margin: 2rem 0rem;
     color: white;
-    width: 6rem;
-    border-radius: 50px;
-    margin: 2rem 1rem 0 0.5rem;
-    padding: 0.7rem 1.5rem;
+    -webkit-transition: background-color 250ms ease-out;
+    -o-transition: background-color 250ms ease-out;
+    transition: background-color 250ms ease-out;
 }
 .cta-button:hover{
-    background-color: rgba(255, 99, 71, 0.9);
-    padding: 0.8rem 1.6rem;
-}
+    background-color: rgb(233, 60, 21);
+    color: white;
+} 
 @media (min-width:950px){
     .cta-button{
-        background-color: rgb(113, 46, 30);
         margin-left: 3rem;
+        border: 2px solid rgb(113, 46, 30);
+        color: rgb(37, 7, 0);
     }
+    .cta-button:hover{
+        background-color: rgb(113, 46, 30);
+    } 
 }
 #menu-icon{
     position: absolute;
@@ -187,8 +227,7 @@ body h2{
     top: 0;
     color: rgb(113, 46, 30);
     margin: 2.5rem 1.5rem 0 1rem;
-    /* width: clamp( 0px, 3vw, 500px);
-    height: clamp( 30px, 3vw, 50px); */
+   font-size: clamp(18px, 4vw, 30px);
 }
 
 @media (min-width:950px) {
@@ -205,12 +244,22 @@ body h2{
 }
 @media (min-width:950px){
     .main-header{
-        min-height: 25rem;
+        min-height: 30rem;
         background-image: url(assets/home-page-background.png);
         background-position: top -500px right -380px;
         background-size: cover;
-        padding: 4rem var(--side-space);
+        padding: 2rem var(--side-space);
     }
+}
+.all-buttons{
+    -webkit-transition: translate 250ms ease;
+    -o-transition: translate 250ms ease;
+    transition: translate 250ms ease;
+}
+.all-buttons:hover{
+    -webkit-transform: translate(2px, 2px);
+        -ms-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
 }
 .header-img{
     width: 100%;
@@ -272,7 +321,7 @@ body h2{
 
 @media (min-width:950px){
     .header-flexbox-cont{
-        height: 25rem;
+        height: 20rem;
     }
 }
 .text-grp{
@@ -322,7 +371,11 @@ body h2{
     border-top-right-radius: 50px;
     padding-top: 2rem
 }
-
+@media (min-width:950px){
+    .sect-1-outter{
+        /* margin-top: 5rem; */
+    }
+}
 .sect1-txt{
     padding: 2rem 3rem;
     text-align: center;
@@ -386,7 +439,7 @@ body h2{
     }
 }
 .sect3-grp, .sect3-name, .abt-sect3-grp, .abt-sect4-grp, .abt-sect3-name, .abt-sect4-name{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .sect-4{
     padding-top: 0.2rem;
@@ -402,7 +455,7 @@ body h2{
     margin: 2rem 3rem;
 }
 .sect4-heading{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .sect4-img{
     width: 100%;
@@ -448,6 +501,7 @@ input[type=text]{
             box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
     outline: none;
     caret-color: rgb(233, 60, 21);
+    color:rgba(37, 7, 0, 0.3);
 }
 .sect5-heading{
     margin-bottom: .5rem;
@@ -461,6 +515,11 @@ input[type=text]{
     color: white;
     display: inline-block;
     border-style: none;
+}
+.sect5-body p, .serv-sect4-body p{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
 }
 .footer-sect-grp{
     padding-top: 2rem;
@@ -478,9 +537,9 @@ input[type=text]{
                     -ms-flex-align: start;
                         align-items: flex-start;
     }
-    .footer-nav-grp{
+    /* .footer-nav-grp{
         display: block;
-    }
+    } */
 }
 .footer-sect{
     padding-top: 1rem;
@@ -514,16 +573,75 @@ input[type=text]{
     padding: 1rem;
 }
 .footer-nav-item{
+    margin: 0 auto 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     text-decoration: none;
     color: rgb(251, 115, 83);
     display: block;
-    padding: 0.5rem;
+    position: relative;
 }  
-.footer-nav-item:hover{
-    cursor: pointer;
+.footer-nav-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+            -webkit-transition: -webkit-transform 250ms ease-in;
+            transition: -webkit-transform 250ms ease-in;
+            -o-transition: transform 250ms ease-in;
+            transition: transform 250ms ease-in;
+            transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
-.footer-nav-item2{
-    color: white;
-    -webkit-text-decoration-color: rgb(251, 115, 83);
-            text-decoration-color: rgb(251, 115, 83);
+.footer-nav-item:hover::after{
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left ;
+        -ms-transform-origin: left ;
+            transform-origin: left ;
+}
+.orange-underline{
+    display: block;
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+.orange-underline::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: rgb(233, 60, 21);
+    width: 100%;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+            -webkit-transition: -webkit-transform 250ms ease-in;
+            transition: -webkit-transform 250ms ease-in;
+            -o-transition: transform 250ms ease-in;
+            transition: transform 250ms ease-in;
+            transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+.orange-underline:hover::after{
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left ;
+        -ms-transform-origin: left ;
+            transform-origin: left ;
 }

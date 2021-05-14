@@ -6,6 +6,7 @@
         width: max-content;
         margin: 0 auto 0 auto;
         padding-bottom: 7px;
+        margin-bottom: 2rem;
     }
 }
 body h2{
@@ -18,7 +19,7 @@ body h2{
 @media (min-width:950px){
     .about-header{
         min-height: 25rem;
-        padding: 4rem var(--side-space);
+        padding: 2rem var(--side-space);
     }
 }
 .abt-header-txt-grp{
@@ -136,9 +137,10 @@ body h2{
     }
     
 }
-.abt-sect4-caption{
-    /* margin:  ; */
-}
+/* .abt-sect3-body h2{
+    margin-bottom: 2rem;
+} */
+
 .abt-sect4-body{
     background-color: rgba(232, 196, 188, 0.3);
     padding: 2rem 2rem;
@@ -168,6 +170,7 @@ body h2{
     }
     .abt-sect4-grp{
         width: 30%;
+        /* margin: 2rem 0; */
     }
     .abt-sect4-h2{
         padding: none;
@@ -248,4 +251,6 @@ body h2{
 }
 .abt-sect6-link{
    color: rgba(251, 115, 83); 
+   margin: 0 auto 0 auto;
+   text-decoration: none;
 }
