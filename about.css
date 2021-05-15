@@ -14,7 +14,7 @@ body h2{
 }
 .about-header{
     min-height: 40rem;
-   padding: 2rem 0.5rem 5rem 0.5rem;
+   padding: 1rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:950px){
     .about-header{
@@ -48,7 +48,7 @@ body h2{
     }
 }
 .abt-sect1-txt{
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     text-align: center;
     line-height: 30px;
     color: white;
@@ -63,7 +63,7 @@ body h2{
 
 .abt-sect-2{
     text-align: center;
-    margin: 2rem 3rem;
+    margin: 2rem 1rem;
     line-height: 30px;
 }
 @media (min-width:800px){
@@ -137,14 +137,11 @@ body h2{
     }
     
 }
-/* .abt-sect3-body h2{
-    margin-bottom: 2rem;
-} */
 
 .abt-sect4-body{
     background-color: rgba(232, 196, 188, 0.3);
     padding: 2rem 2rem;
-    margin: 3rem 2rem;
+    margin: 3rem 1rem;
     text-align: center;
     line-height: 1.5;
     color: rgba(37, 7, 0);
@@ -183,7 +180,7 @@ body h2{
 .abt-sect5-body{
     width: auto;
     background-color: rgba(37, 7, 0, 0.8);
-     padding: 3rem 2rem;
+     padding: 3rem 1rem;
     text-align: center;
     line-height: 30px;
     color: white
@@ -245,7 +242,7 @@ body h2{
 }
 .abt-sect-6{
     text-align: center;
-    padding: 8rem 2rem 3rem 2rem;
+    padding: 8rem 1rem 3rem 1rem;
     color: rgba(37, 7, 0);
     line-height: 30px;
 }

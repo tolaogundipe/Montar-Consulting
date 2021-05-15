@@ -55,7 +55,7 @@ html {
     overflow-x: hidden;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.6;
 } 
 body h2{
@@ -78,20 +78,18 @@ body h2{
      }
  }
 .logo{
-    display: block;
-    max-width: 100%;
-    height: auto;
+    display: inline-block;
+     height: auto;
     max-width: clamp(100px, 25vw, 200px);
 }
 .nav-group{
-    background-color: rgba(245, 245, 245, 0.8);
     height: 100%;
     width: 0; 
     position: fixed; 
     z-index: 1;
     top: 0; 
     left: 0;
-    background-color: rgba(37, 7, 0, 0.9);
+    background-color: rgba(37, 7, 0, 0.95);
     overflow-x: hidden; 
     padding-top: 60px; 
     -webkit-transition: 0.5s; 
@@ -185,7 +183,8 @@ body h2{
   }
   .closebtn:hover{
       background-color: rgb(233, 60, 21);
-      border-radius: 200px;
+      border-radius: 100px;
+      padding: 5px;
   }
  
 @media (min-width:950px){
@@ -226,7 +225,7 @@ body h2{
     right: 0;
     top: 0;
     color: rgb(113, 46, 30);
-    margin: 2.5rem 1.5rem 0 1rem;
+    margin: 1.5rem 1.5rem 0 1rem;
    font-size: clamp(18px, 4vw, 30px);
 }
 
@@ -240,7 +239,7 @@ body h2{
     min-height: 40rem;
     background-image: url(assets/home-page-background.png);
     background-position:  right -200px top  -500px;
-    padding: 2.5rem 0.5rem 5rem 0.5rem;
+    padding: 1rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:950px){
     .main-header{
@@ -371,13 +370,9 @@ body h2{
     border-top-right-radius: 50px;
     padding-top: 2rem
 }
-@media (min-width:950px){
-    .sect-1-outter{
-        /* margin-top: 5rem; */
-    }
-}
+
 .sect1-txt{
-    padding: 2rem 3rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     line-height: 30px;
     color: white;
@@ -424,7 +419,7 @@ body h2{
 }
 .sect3-body{
     padding: 2rem 2rem;
-    margin: 5rem 2rem 2rem 2rem;
+    margin: 5rem 1rem 2rem 1rem;
     text-align: center;
     line-height: 1.5;
     color: rgba(37, 7, 0);
@@ -452,7 +447,7 @@ body h2{
 }
 .sect4-body, .sect5-body{
     text-align: center;
-    margin: 2rem 3rem;
+    margin: 2rem 1rem;
 }
 .sect4-heading{
     margin-bottom: 1rem;
@@ -501,7 +496,7 @@ input[type=text]{
             box-shadow: 0 1rem 2rem -1rem rgba(0,0,0,0.2);
     outline: none;
     caret-color: rgb(233, 60, 21);
-    color:rgba(37, 7, 0, 0.3);
+    color:rgba(37, 7, 0);
 }
 .sect5-heading{
     margin-bottom: .5rem;
@@ -563,7 +558,7 @@ input[type=text]{
     border-top-left-radius: 70px;
 }
 .footer-logo{
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }

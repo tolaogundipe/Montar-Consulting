@@ -13,7 +13,7 @@ body h2{
 }
 .services-header{
     min-height: 40rem;
-   padding: 2rem 0.5rem 5rem 0.5rem;
+   padding: 1rem 0.5rem 5rem 0.5rem;
 }
 @media (min-width:800px){
     .services-header{
@@ -47,7 +47,7 @@ body h2{
     }
 }
 .serv-sect1-txt{
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     text-align: center;
     line-height: 30px;
     color: white;
@@ -64,7 +64,7 @@ body h2{
     text-align: center;
 }
 .serv-sect2-grp{
-    margin: 3rem 2rem;
+    margin: 3rem 1rem;
     background-color: rgba(148, 148, 148, 0.15);
     padding: 2rem;
     border-radius: 50px;
@@ -122,10 +122,6 @@ body h2{
 .serv-sect2-grp li{
     padding-bottom: 1rem;
 }
-/* .serv-sect2-grp img{
-    max-width: 100%;
-    height: auto;
-} */
 .serv-sect2-li img{
     max-width: 100%;
     height: auto;
@@ -133,7 +129,7 @@ body h2{
 .serv-sect-3{
     background-color: rgba(37, 7, 0, 0.8);
     text-align: center;
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 4rem 1rem 3rem 1rem;
     color: rgb(250, 244, 243);
     line-height: 30px;
 }
@@ -141,9 +137,8 @@ body h2{
    color: rgba(251, 115, 83); 
 }
 .serv-sect-4{
-    /* background-color: rgba(251, 115, 83, 0.1); */
     text-align: center;
-    margin: 4rem 2rem;
+    margin: 4rem 1rem;
     color: rgb(37, 7, 0);
 }
 .serv-sect4-body{
@@ -160,7 +155,7 @@ input[type=text]{
     border-radius: 50px;
     border: 1px solid #ccc;
     margin: 0.5rem;
-    color: rgba(37, 7, 0, 0.3);
+    color: rgba(37, 7, 0);
 }
 .serv-sect4-heading{
     margin-bottom: 1rem;
