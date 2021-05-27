@@ -640,3 +640,9 @@ input[type=text]{
         -ms-transform-origin: left ;
             transform-origin: left ;
 }
+.cta-txt{
+    padding-top: 5rem;
+}
+.footer-space{
+    padding: 0.5rem 0;
+}
